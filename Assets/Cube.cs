@@ -16,7 +16,11 @@ public class Cube : MonoBehaviour {
 	void Update () 
 	{
 		var h = Input.GetAxis("Horizontal");
+        var v = Input.GetAxis("Vertical");
 
-		transform.position += Vector3.right * h * speed * Time.deltaTime;
-	}
+        transform.position += Vector3.right * h * speed * Time.deltaTime;
+
+        transform.position += Vector3.up * v * speed * Time.deltaTime;
+
+    }
 }
